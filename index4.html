@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>document</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+      .iconBox {
+position: relative;
+      }
+
+.iconBox::after { /*PSEUDO ELEMENT*/
+content: none;
+font-family: "Font awesome;
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: blueviolet;
+transition: .3s;
+font-weight: 400;
+color: white;
+}
+
+.iconBox:hover::after {
+top:0;
+}
+  </style>
+</head>
+<body>
+
+  <!-- 
+      FLEX BOX in TAILWINDCSS
+
+
+      border-radius:rounded
+
+      display:flex=>flex
+
+
+      align-items=>items-start, items-center, items-end
+
+      justify-content=>jystify-start, justify-center, justify-end,
+
+      grid-template-colums:repeat2, 
+
+     -->
+     <header class="bg-green-400 flex justify-between items-center font-bold text-white">
+         <div class="pl-4">
+             <h1 class="text-3xl">logo</h1>
+         </div>
+         <div>
+            <ul class="hidden md:flexx">
+<li class="py-4 transition duration-300 hover:text-green-400 hover:bg-white px-8">home</li>
+<li class="py-4 transition duration-300 hover:text-green-400 hover:bg-white px-8">about</li>
+<li class="py-4 transition duration-300 hover:text-green-400 hover:bg-white px-8">service</li>
+<li class="py-4 transition duration-300 hover:text-green-400 hover:bg-white px-8">contact</li>
+            </ul>   
+
+            <div class="py-4 px-8 md:hidden">
+                <i class="fas fa-bars"></i>
+            </div>
+         </div>
+     </header>
+
+    <main class="w-full px-3 my-4">
+        <div class="container mx-auto">
+<div class="w-full grid grid-colt-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+<div class="h-64 bg-red-400 bg-opacity-30 flex items-center justify-center border-4 rounded-xl border-red-400"></div>
+<div class="w-1/2 h-1/2 text-gray-600 text-6xl flex items-center justify-center overflow-hidden">
+<i class="fas fa-film"></i>
+</div>
+<div class="h-64 bg-red-400 bg-opacity-30 border rounded-xl border-red-400"></div>
+<div class="h-64 bg-red-400 bg-opacity-30 border rounded-xl border-red-400"></div>
+<div class="h-64 bg-red-400 bg-opacity-30 border rounded-xl border-red-400"></div>
+</div>
+        </div>
+    </main>
+</body>
+</html>
